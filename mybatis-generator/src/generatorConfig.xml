@@ -5,7 +5,7 @@
 <generatorConfiguration>
     <!--数据库驱动-->
     <!-- <classPathEntry    location="mysql-connector-java-5.1.25.jar"/> -->
-    <classPathEntry    location="D:\workspace-sts\mybatis-generator\src\mysql-connector-java-5.1.25.jar"/>
+    <classPathEntry    location="E:\mybatis-generator\mybatis-generator\src\mysql-connector-java-5.1.25.jar"/>
     <context id="DB2Tables"    targetRuntime="MyBatis3">
         <commentGenerator>
             <property name="suppressDate" value="true"/>
@@ -18,29 +18,30 @@
             <property name="forceBigDecimals" value="false"/>
         </javaTypeResolver>
         <!--生成Model类存放位置-->
-        <javaModelGenerator targetPackage="lcw.model" targetProject="src">
+        <javaModelGenerator targetPackage="com.searainbow.rsrdc.uuc.entity" targetProject="src">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
         <!--生成映射文件存放位置-->
-        <sqlMapGenerator targetPackage="lcw.mapping" targetProject="src">
+        <sqlMapGenerator targetPackage="mappers" targetProject="src">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
         <!--生成Dao类存放位置-->
-        <javaClientGenerator type="XMLMAPPER" targetPackage="lcw.dao" targetProject="src">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.searainbow.rsrdc.uuc.dao" targetProject="src">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
         <!--生成对应表及类名-->
+        <!-- <table tableName="uuc_business_unit" domainObjectName="BusinessUnit" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table> -->
         <table tableName="sys_app" domainObjectName="SysApp" ></table>
-		<table tableName="uuc_business_unit" domainObjectName="BusinessUnit" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
-		<table tableName="uuc_org" domainObjectName="Org" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
-		<table tableName="uuc_resource" domainObjectName="Resource" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
-		<table tableName="uuc_role" domainObjectName="Role" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
-		<table tableName="uuc_role_rel_resource" domainObjectName="RoleRelResource" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
-		<table tableName="uuc_slave" domainObjectName="Slave" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
-		<table tableName="uuc_user" domainObjectName="User" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
-		<table tableName="uuc_user_account" domainObjectName="UserAccount" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
-		<table tableName="uuc_user_rel_org" domainObjectName="UserRelOrg" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
-		<table tableName="uuc_user_rel_role" domainObjectName="UserRelRole" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+		<table tableName="uuc_business_unit" domainObjectName="BusinessUnit" ></table>
+		<table tableName="uuc_org" domainObjectName="Org" ></table>
+		<table tableName="uuc_resource" domainObjectName="Resource" ></table>
+		<table tableName="uuc_role" domainObjectName="Role" ></table>
+		<table tableName="uuc_role_rel_resource" domainObjectName="RoleRlResource" ></table>
+		<table tableName="uuc_slave" domainObjectName="Slave" ></table>
+		<table tableName="uuc_user" domainObjectName="User" ></table>
+		<table tableName="uuc_user_account" domainObjectName="UserAccount" ></table>
+		<table tableName="uuc_user_rel_org" domainObjectName="UserRlOrg" ></table>
+		<table tableName="uuc_user_rel_role" domainObjectName="UserRlRole" ></table>
     </context>
 </generatorConfiguration>
